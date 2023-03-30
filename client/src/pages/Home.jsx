@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom'
 
 import { Toaster } from 'react-hot-toast'
 import { useFormik } from 'formik'
-import { usernameValidate } from '../helper/Validate'
+import { userValidate } from '../helper/Validate'
 
 
 const Home = () => {
 
   const formik = useFormik({
     initialValues: {
-      username: ''
+      username: '',
+      password: ''
     },
-    validate: usernameValidate,
+    validate: userValidate,
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit: async values => {
@@ -32,6 +33,7 @@ const Home = () => {
           </div>
           <div className="textbox">
             <input {...formik.getFieldProps('username')}type="text" placeholder="username" />
+            <input {...formik.getFieldProps('password')}type="text" placeholder="password" />
             <button type="submit">Lets Go</button>
           </div>
           <div className="">
