@@ -34,7 +34,7 @@ const Register = () => {
           <input {...formik.getFieldProps('email')}type="text" placeholder="email" />
             <input {...formik.getFieldProps('username')}type="text" placeholder="username" />
             <input {...formik.getFieldProps('password')}type="text" placeholder="password" />
-            <button type="submit">rRegister</button>
+            <button type="submit">Register</button>
           </div>
           
         </form>
