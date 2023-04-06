@@ -12,16 +12,16 @@ app.use(cors())
 app.use(morgan('tiny'))
 app.disable('x-powered-by')
 
-const port = 8000
+const port = 8080
 
 app.get('/', (req,res) => {
 
-    res.status(201).json("GEt")
+    res.status(201).json("Get")
 })
 
 // api routes //
 
-app.use('./api', router)
+app.use('/api', router)
 
 
 // Server starts only when theres a valid connection //

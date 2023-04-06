@@ -4,6 +4,9 @@ const router = Router()
 
 //Post //
 
-router.route('/register').post((req, res) => res.json('register route'))
+router.route('/reg').post((req, res) => res.json('register route'))
 
 //Get //
+
+
+export default router
