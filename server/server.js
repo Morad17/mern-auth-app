@@ -2,8 +2,9 @@ import express from'express'
 import mongoose from 'mongoose'
 import cors from'cors'
 import morgan from'morgan'
-import connect from './database/connect.js'
 
+import connect from './database/connect.js'
+import router from './router/route.js'
 const app = express()
 
 app.use(express.json)
@@ -17,6 +18,11 @@ app.get('/', (req,res) => {
 
     res.status(201).json("GEt")
 })
+
+// api routes //
+
+app.use('./api', router)
+
 
 // Server starts only when theres a valid connection //
 connect().then(() => {
